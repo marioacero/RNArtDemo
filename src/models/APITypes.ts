@@ -1,0 +1,15 @@
+import {Event} from './Event';
+
+interface Pagination {
+  total: number;
+  limit: number;
+  offset: number;
+  total_pages: number;
+  current_page: number;
+  next_url: string;
+}
+
+export interface EventsApiResponse {
+  pagination: Pagination;
+  data: Event[];
+}

@@ -1,0 +1,32 @@
+export interface Event {
+  id: number;
+  api_link: string;
+  title: string;
+  title_display: string;
+  image_url: string;
+  short_description: string;
+  header_description: string | null;
+  list_description: string;
+  description: string;
+  location: string;
+  program_ids: number[];
+  program_titles: string[];
+  buy_button_text: string;
+  buy_button_caption: string;
+  is_registration_required: boolean;
+  is_member_exclusive: boolean;
+  is_sold_out: boolean;
+  is_free: boolean;
+  is_private: boolean;
+  is_admission_required: boolean;
+  is_after_hours: boolean;
+  is_virtual_event: boolean;
+  start_date: string;
+  end_date: string;
+  start_time: string;
+  end_time: string;
+  date_display: string;
+  door_time: string | null;
+  entrance: string | null;
+  timestamp: string;
+}
