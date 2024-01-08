@@ -2,16 +2,12 @@ import {Colors} from '@themes/Colors';
 import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
-  safeAreaContainer: {
-    flex: 1,
-    backgroundColor: Colors.background,
-  },
   titleContainer: {
     paddingHorizontal: 24,
     marginTop: 16,
+    height: 30,
   },
   title: {
-    color: Colors.white,
     fontSize: 18,
     fontWeight: '600',
   },
