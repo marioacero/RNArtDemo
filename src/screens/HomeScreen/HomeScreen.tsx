@@ -1,4 +1,4 @@
-import {FlatList, Text, View} from 'react-native';
+import {FlatList, Text, TouchableOpacity, View} from 'react-native';
 import React, {FC, useEffect, useState} from 'react';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import styles from './styles';
@@ -10,6 +10,7 @@ import {EventCard} from '@components/EventCard';
 import {useAppDispatch} from '@hooks/storeAppSelector';
 import {loadFavFromStorage} from '@utils/store';
 import {Skeleton} from '@rneui/themed';
+import notifee, {AuthorizationStatus} from '@notifee/react-native';
 
 const HomeScreen: FC<HomeStackParamListNavProps<routes.Home>> = ({
   navigation,
@@ -35,6 +36,23 @@ const HomeScreen: FC<HomeStackParamListNavProps<routes.Home>> = ({
     navigation.navigate(routes.Details, {event});
   };
 
+  const showNotification = async () => {
+    await notifee.displayNotification({
+      title: 'New Event for you!!',
+      body: 'Check your home screen for new events',
+    });
+  };
+
+  const sendPushNotification = async () => {
+    const settings = await notifee.requestPermission();
+
+    if (settings.authorizationStatus >= AuthorizationStatus.AUTHORIZED) {
+      showNotification();
+    } else {
+      console.log('User declined permissions');
+    }
+  };
+
   useEffect(() => {
     if (eventsQuery.data) {
       sortEvents();
@@ -50,6 +68,9 @@ const HomeScreen: FC<HomeStackParamListNavProps<routes.Home>> = ({
     <SafeAreaView>
       <View style={styles.titleContainer}>
         <Text style={styles.title}>What do you want to do?</Text>
+        <TouchableOpacity onPress={sendPushNotification}>
+          <Text>Test push</Text>
+        </TouchableOpacity>
       </View>
       {eventsQuery.isLoading && (
         <View style={styles.skeletonContainer}>

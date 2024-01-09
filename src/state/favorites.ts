@@ -23,12 +23,11 @@ const initialState: FavState = {
   value: [],
 };
 
-// Cargar los valores iniciales al inicio
+// Load initial values
 loadInitialValues().then(initialValues => {
   initialState.value = initialValues;
 });
 
-console.log('initialState', initialState.value);
 const favSlice = createSlice({
   name: 'favorites',
   initialState: initialState,
@@ -41,7 +40,7 @@ const favSlice = createSlice({
         // If not, add it to the array
         state.value.push(payload);
       } else {
-        state.value = state.value.filter(movie => movie.id !== payload.id);
+        state.value = state.value.filter(item => item.id !== payload.id);
       }
       // Persist in AsyncStorage
       AsyncStorage.setItem(STORAGE_KEY, JSON.stringify(state.value)).catch(
