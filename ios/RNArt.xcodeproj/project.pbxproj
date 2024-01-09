@@ -33,6 +33,7 @@
 		DC474D712B4C9C0100F9D89D /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DC474D5E2B4C9C0100F9D89D /* SimpleLineIcons.ttf */; };
 		DC474D722B4C9C0100F9D89D /* FontAwesome6_Brands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DC474D5F2B4C9C0100F9D89D /* FontAwesome6_Brands.ttf */; };
 		DC474D732B4C9C0100F9D89D /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DC474D602B4C9C0100F9D89D /* MaterialIcons.ttf */; };
+		DC80FC102B4CF8240092EBC3 /* RTCCalendarModule.m in Sources */ = {isa = PBXBuildFile; fileRef = DC80FC0F2B4CF8240092EBC3 /* RTCCalendarModule.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,8 @@
 		DC474D5E2B4C9C0100F9D89D /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SimpleLineIcons.ttf; sourceTree = "<group>"; };
 		DC474D5F2B4C9C0100F9D89D /* FontAwesome6_Brands.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome6_Brands.ttf; sourceTree = "<group>"; };
 		DC474D602B4C9C0100F9D89D /* MaterialIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MaterialIcons.ttf; sourceTree = "<group>"; };
+		DC80FC0E2B4CF7C20092EBC3 /* RCTCalendarModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCTCalendarModule.h; sourceTree = "<group>"; };
+		DC80FC0F2B4CF8240092EBC3 /* RTCCalendarModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RTCCalendarModule.m; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -130,6 +133,8 @@
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
+				DC80FC0E2B4CF7C20092EBC3 /* RCTCalendarModule.h */,
+				DC80FC0F2B4CF8240092EBC3 /* RTCCalendarModule.m */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
 			name = RNArt;
@@ -478,6 +483,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
+				DC80FC102B4CF8240092EBC3 /* RTCCalendarModule.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

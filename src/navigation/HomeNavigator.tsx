@@ -1,9 +1,9 @@
 import {createStackNavigator} from '@react-navigation/stack';
-import {HomeScreen} from '@screens/HomeScreen';
 import React from 'react';
 import {HomeNavigatorType} from './types';
 import {routes} from './routes';
 import {DetailsScreen} from '@screens/DetailsScreen/DetailsScreen';
+import MainNavigator from './MainNavigator';
 
 const {Navigator, Screen} = createStackNavigator<HomeNavigatorType>();
 
@@ -12,7 +12,7 @@ export const HomeNavigator = () => {
     <Navigator>
       <Screen
         name={routes.Home}
-        component={HomeScreen}
+        component={MainNavigator}
         options={{headerShown: false}}
       />
       <Screen
@@ -21,11 +21,6 @@ export const HomeNavigator = () => {
         options={{
           headerShown: true,
           title: 'Event Details',
-          // headerStyle: {
-          //   backgroundColor: Colors.background,
-          // },
-          // headerTintColor: Colors.white,
-          // headerShadowVisible: false, // applied here
           headerBackTitleVisible: false,
         }}
       />

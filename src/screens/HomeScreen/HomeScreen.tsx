@@ -9,6 +9,7 @@ import {Event} from '@models/Event';
 import {EventCard} from '@components/EventCard';
 import {useAppDispatch} from '@hooks/storeAppSelector';
 import {loadFavFromStorage} from '@utils/store';
+import {Skeleton} from '@rneui/themed';
 
 const HomeScreen: FC<HomeStackParamListNavProps<routes.Home>> = ({
   navigation,
@@ -50,7 +51,26 @@ const HomeScreen: FC<HomeStackParamListNavProps<routes.Home>> = ({
       <View style={styles.titleContainer}>
         <Text style={styles.title}>What do you want to do?</Text>
       </View>
-      <View style={{paddingHorizontal: 16}}>
+      {eventsQuery.isLoading && (
+        <View style={styles.skeletonContainer}>
+          <Skeleton animation="wave" width={'100%'} height={120} />
+          <Skeleton
+            style={styles.skeleton}
+            animation="wave"
+            width={'100%'}
+            height={60}
+          />
+          <Skeleton animation="wave" width={'100%'} height={120} />
+          <Skeleton
+            style={styles.skeleton}
+            animation="wave"
+            width={'100%'}
+            height={60}
+          />
+        </View>
+      )}
+
+      <View style={styles.list}>
         <FlatList
           data={sortedData}
           renderItem={({item}) => renderEvent(item)}

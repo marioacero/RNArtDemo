@@ -22,6 +22,15 @@ const styles = StyleSheet.create({
     fontSize: 13,
     fontWeight: '600',
   },
+  skeletonContainer: {
+    paddingHorizontal: 6,
+  },
+  skeleton: {
+    marginVertical: 6,
+  },
+  list: {
+    paddingHorizontal: 16,
+  },
 });
 
 export default styles;
