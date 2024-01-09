@@ -32,16 +32,19 @@ const EventCard: FC<Props> = props => {
   };
 
   return (
-    <TouchableOpacity style={styles.container} onPress={onPressCard}>
+    <TouchableOpacity
+      style={styles.container}
+      onPress={onPressCard}
+      testID={`${event.id}`}>
       <View>
         <Image
-          style={{width: '100%', height: 150}}
+          style={styles.image}
           source={{
             uri: event.image_url,
           }}
         />
         <View style={styles.date}>
-          <Text style={{color: 'white'}}>{date}</Text>
+          <Text style={styles.dateText}>{date}</Text>
         </View>
       </View>
 

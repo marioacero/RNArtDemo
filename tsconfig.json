@@ -94,6 +94,9 @@
       "@state/*": [
         "src/state/*"
       ],
+      "@fixture/*": [
+        "src/fixture/*"
+      ],
     }
   },
   "exclude": [

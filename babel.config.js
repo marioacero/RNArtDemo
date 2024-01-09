@@ -27,6 +27,7 @@ module.exports = {
           '@utils': './src/utils',
           '@services': './src/services',
           '@state': './src/state',
+          '@fixture': './src/fixture',
         },
       },
     ],

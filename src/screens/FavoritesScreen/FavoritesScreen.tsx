@@ -6,6 +6,7 @@ import {Event} from '@models/Event';
 import {EventCard} from '@components/EventCard';
 import {useAppSelector} from '@hooks/storeAppSelector';
 import {Colors} from '@themes/Colors';
+import styles from './styles';
 
 const FavoritesScreen: FC<HomeStackParamListNavProps<routes.Home>> = ({
   navigation,
@@ -22,7 +23,7 @@ const FavoritesScreen: FC<HomeStackParamListNavProps<routes.Home>> = ({
 
   if (favorites.length === 0) {
     return (
-      <View style={{width: '100%', alignItems: 'center', marginTop: 90}}>
+      <View style={styles.emptyContainer}>
         <Text style={{color: Colors.grey}}>
           You will find your favorites on this screen
         </Text>
@@ -30,7 +31,7 @@ const FavoritesScreen: FC<HomeStackParamListNavProps<routes.Home>> = ({
     );
   }
   return (
-    <View style={{flex: 1, paddingHorizontal: 16}}>
+    <View style={styles.container}>
       <FlatList data={favorites} renderItem={({item}) => renderEvent(item)} />
     </View>
   );

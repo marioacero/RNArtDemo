@@ -20,6 +20,13 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.background,
     paddingHorizontal: 6,
   },
+  image: {
+    width: '100%',
+    height: 150,
+  },
+  dateText: {
+    color: 'white',
+  },
 });
 
 export default styles;

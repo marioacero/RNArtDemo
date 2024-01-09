@@ -1,0 +1,36 @@
+import {Event} from '@models/Event';
+
+const sampleEvent: Event = {
+  id: 1,
+  api_link: 'https://example.com/api/events/1',
+  title: 'Sample Event',
+  title_display: 'Sample Event Display Title',
+  image_url: 'https://example.com/sample-image.jpg',
+  short_description: '<p>Sample description</p>',
+  header_description: 'Header description',
+  list_description: 'List description',
+  description: 'Detailed event description',
+  location: 'Sample Location',
+  program_ids: [1, 2],
+  program_titles: ['Program 1', 'Program 2'],
+  buy_button_text: 'Buy Ticket',
+  buy_button_caption: 'Ticket Details',
+  is_registration_required: true,
+  is_member_exclusive: false,
+  is_sold_out: false,
+  is_free: false,
+  is_private: false,
+  is_admission_required: true,
+  is_after_hours: false,
+  is_virtual_event: false,
+  start_date: '2024-01-08',
+  end_date: '2024-01-10',
+  start_time: '12:00:00',
+  end_time: '14:00:00',
+  date_display: 'January 8, 2024',
+  door_time: '11:30:00',
+  entrance: 'Main Entrance',
+  timestamp: '2024-01-08T12:00:00Z',
+};
+
+export default sampleEvent;
